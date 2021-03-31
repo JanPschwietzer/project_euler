@@ -20,7 +20,7 @@ int main()
     {
         std::cout << berechnung(x) << std::endl;
     }
-    
+
     return 0;
 }
 
@@ -30,10 +30,10 @@ int main()
 long berechnung(long zahl)
 {
     long ergebnis = 0;
-    
+
     for (long i = (zahl + 1) / 2; i > 2; i--)
     {
-        if (zahl % i == 0 && i % 2 != 0)
+        if (zahl % i == 0)
         {
             if (ist_primzahl(i))
             {
@@ -51,7 +51,7 @@ long berechnung(long zahl)
 //
 long ist_primzahl(long zahl)
 {
-    for (long i = 3; i < (zahl + 1) / 2; i++)
+    for (long i = 2; i < (zahl + 1) / 2; i++)
     {
         if (zahl % i == 0)
         {
